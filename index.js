@@ -20,9 +20,7 @@ require('./server/firebaseConfig')
 
 const port = parseInt(process.env.PORT, 10) || 8080;
 
-app.use("/", (req, res) => {
-    res.json({ message: "Hello from express"})
-});
+
 app.use("/auth", authRouter);
 app.use("/recipes", recipesRouter);
 app.use("/profile", profileRouter);

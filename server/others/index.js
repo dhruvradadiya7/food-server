@@ -27,4 +27,4 @@ router.post("/mail-list", (req, res) => {
     }
 });
 
-module.exports = router;
+export default router;

@@ -1,10 +1,10 @@
-const {
+import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-} = require("firebase/auth");
-const { getDatabase, ref, child, get } = require("@firebase/database");
-const { storeUserData } = require("./controller");
+} from "firebase/auth";
+import  { getDatabase, ref, child, get } from "@firebase/database";
+import { storeUserData } from './controller';
 
 const router = require("express").Router();
 
@@ -53,5 +53,4 @@ router.post("/login", (req, res) => {
       res.status(400).send(error);
     });
 });
-
-module.exports = router;
+export default router;
